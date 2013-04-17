@@ -145,13 +145,13 @@ function displayUI()
      */
     $('#chat').prepend('<div id="plugbot-ui"></div>');
        
-    var cWoot = autowoot ? '#FFD700' : '#000000';
-    var cQueue = autoqueue ? '#FFD700' : '#000000';
-    var cHideVideo = hideVideo ? '#FFD700' : '#000000';
-    var cUserList = userList ? '#FFD700' : '#000000';
+    var cWoot = autowoot ? '#ADFF2F' : '#ED1C24';
+    var cQueue = autoqueue ? '#ADFF2F' : '#ED1C24';
+    var cHideVideo = hideVideo ? '#ADFF2F' : '#ED1C24';
+    var cUserList = userList ? '#ADFF2F' : '#ED1C24';
        
     $('#plugbot-ui').append(
-        '<p id="plugbot-btn-woot" style="color:' + cWoot + '">Woot me Nigga</p><p id="plugbot-btn-queue" style="color:' + cQueue + '">Get in Q</p><p id="plugbot-btn-hidevideo" style="color:' + cHideVideo + '">Disable video</p><p id="plugbot-btn-skipvideo" style="color:#1E90FF">Auto Skip</p><p id="plugbot-btn-userlist" style="color:' + cUserList + '">Glory People</p>');
+        '<p id="plugbot-btn-woot" style="color:' + cWoot + '">auto-woot</p><p id="plugbot-btn-queue" style="color:' + cQueue + '">auto-queue</p><p id="plugbot-btn-hidevideo" style="color:' + cHideVideo + '">hide video</p><p id="plugbot-btn-skipvideo" style="color:#1E90FF">skip video</p><p id="plugbot-btn-userlist" style="color:' + cUserList + '">userlist</p>');
 }
  
 /**
@@ -168,7 +168,7 @@ function initUIListeners()
     $('#plugbot-btn-userlist').on("click", function()
         {
         userList = !userList;
-        $(this).css('color', userList ? '#FF00FF' : '#000000');
+        $(this).css('color', userList ? '#FF00FF' : '#ED1C24');
         $('#plugbot-userlist').css('visibility', userList ? 'visible' : 'hidden');
                
         if (!userList)
@@ -188,7 +188,7 @@ function initUIListeners()
     $('#plugbot-btn-woot').on('click', function()
         {
         autowoot = !autowoot;
-        $(this).css('color', autowoot ? '#FF00FF' : '#000000');
+        $(this).css('color', autowoot ? '#ADFF2F' : '#ED1C24');
                
         if (autowoot)
                 {
@@ -204,7 +204,7 @@ function initUIListeners()
     $('#plugbot-btn-hidevideo').on('click', function()
         {
         hideVideo = !hideVideo;
-        $(this).css('color', hideVideo ? '#FF00FF' : '#000000');
+        $(this).css('color', hideVideo ? '#ADFF2F' : '#ED1C24');
         $(this).text(hideVideo ? 'hiding video' : 'hide video');
         $('#yt-frame').animate(
                 {
@@ -229,7 +229,7 @@ function initUIListeners()
         $('#plugbot-btn-skipvideo').on('click', function()
         {
                 skippingVideo = !skippingVideo;
-                $(this).css('color', skippingVideo ? '#F0FFFF' : '#000000');
+                $(this).css('color', skippingVideo ? '#ADFF2F' : '#ED1C24');
                 $(this).text(skippingVideo ? 'skipping video' : 'skip video');
                 if (hideVideo == skippingVideo)
                         {
@@ -248,7 +248,7 @@ function initUIListeners()
     $('#plugbot-btn-queue').on('click', function()
         {
         autoqueue = !autoqueue;
-        $(this).css('color', autoqueue ? '#FF00FF' : '#000000');
+        $(this).css('color', autoqueue ? '#ADFF2F' : '#ED1C24');
                
         if (autoqueue && !isInQueue())
                 {
