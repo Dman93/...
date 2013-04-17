@@ -168,7 +168,7 @@ function initUIListeners()
     $('#plugbot-btn-userlist').on("click", function()
         {
         userList = !userList;
-        $(this).css('color', userList ? '#FF00FF' : '#ED1C24');
+        $(this).css('color', userList ? '#FF00FF' : '#000000');
         $('#plugbot-userlist').css('visibility', userList ? 'visible' : 'hidden');
                
         if (!userList)
@@ -188,7 +188,7 @@ function initUIListeners()
     $('#plugbot-btn-woot').on('click', function()
         {
         autowoot = !autowoot;
-        $(this).css('color', autowoot ? '#FF00FF' : '#ED1C24');
+        $(this).css('color', autowoot ? '#FF00FF' : '#000000');
                
         if (autowoot)
                 {
@@ -204,7 +204,7 @@ function initUIListeners()
     $('#plugbot-btn-hidevideo').on('click', function()
         {
         hideVideo = !hideVideo;
-        $(this).css('color', hideVideo ? '#FF00FF' : '#ED1C24');
+        $(this).css('color', hideVideo ? '#FF00FF' : '#000000');
         $(this).text(hideVideo ? 'hiding video' : 'hide video');
         $('#yt-frame').animate(
                 {
@@ -229,7 +229,7 @@ function initUIListeners()
         $('#plugbot-btn-skipvideo').on('click', function()
         {
                 skippingVideo = !skippingVideo;
-                $(this).css('color', skippingVideo ? '#FF00FF' : '#ED1C24');
+                $(this).css('color', skippingVideo ? '#FF00FF' : '#000000');
                 $(this).text(skippingVideo ? 'skipping video' : 'skip video');
                 if (hideVideo == skippingVideo)
                         {
@@ -248,7 +248,7 @@ function initUIListeners()
     $('#plugbot-btn-queue').on('click', function()
         {
         autoqueue = !autoqueue;
-        $(this).css('color', autoqueue ? '#FF00FF' : '#ED1C24');
+        $(this).css('color', autoqueue ? '#FF00FF' : '#000000');
                
         if (autoqueue && !isInQueue())
                 {
