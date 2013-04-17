@@ -145,10 +145,10 @@ function displayUI()
      */
     $('#chat').prepend('<div id="plugbot-ui"></div>');
        
-    var cWoot = autowoot ? '#FFD700' : '#ED1C24';
-    var cQueue = autoqueue ? '#FFD700' : '#ED1C24';
-    var cHideVideo = hideVideo ? '#FFD700' : '#ED1C24';
-    var cUserList = userList ? '#FFD700' : '#ED1C24';
+    var cWoot = autowoot ? '#FFD700' : '#000000';
+    var cQueue = autoqueue ? '#FFD700' : '#000000';
+    var cHideVideo = hideVideo ? '#FFD700' : '#000000';
+    var cUserList = userList ? '#FFD700' : '#000000';
        
     $('#plugbot-ui').append(
         '<p id="plugbot-btn-woot" style="color:' + cWoot + '">Woot me Nigga</p><p id="plugbot-btn-queue" style="color:' + cQueue + '">Get in Q</p><p id="plugbot-btn-hidevideo" style="color:' + cHideVideo + '">Disable video</p><p id="plugbot-btn-skipvideo" style="color:#1E90FF">Auto Skip</p><p id="plugbot-btn-userlist" style="color:' + cUserList + '">Glory People</p>');
