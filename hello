@@ -229,7 +229,7 @@ function initUIListeners()
         $('#plugbot-btn-skipvideo').on('click', function()
         {
                 skippingVideo = !skippingVideo;
-                $(this).css('color', skippingVideo ? '#FF00FF' : '#000000');
+                $(this).css('color', skippingVideo ? '#F0FFFF' : '#000000');
                 $(this).text(skippingVideo ? 'skipping video' : 'skip video');
                 if (hideVideo == skippingVideo)
                         {
