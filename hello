@@ -149,7 +149,8 @@ function initAPIListeners()
         {
         if (userList)
                 {
-            populateUserlist();
+            
+populateUserlist();
         }
     });
 }
