@@ -151,7 +151,7 @@ function displayUI()
     var cUserList = userList ? '#ADFF2F' : '#ED1C24';
        
     $('#plugbot-ui').append(
-        '<p id="plugbot-btn-woot" style="color:' + cWoot + '">Woot Me Nigga</p><p id="plugbot-btn-queue" style="color:' + cQueue + '">Glory Queue</p><p id="plugbot-btn-hidevideo" style="color:' + cHideVideo + '">Disable Video</p><p id="plugbot-btn-skipvideo" style="color:#1E90FF">skip video</p><p id="plugbot-btn-userlist" style="color:' + cUserList + '">Glory people</p>');p><p id="plugbot-btn-userlist" style="color:' + cUserList + '">GLORYAREA</p>');
+        '<p id="plugbot-btn-woot" style="color:' + cWoot + '">Woot Me Nigga</p><p id="plugbot-btn-queue" style="color:' + cQueue + '">Glory Queue</p><p id="plugbot-btn-hidevideo" style="color:' + cHideVideo + '">Disable Video</p><p id="plugbot-btn-skipvideo" style="color:#1E90FF">skip video</p><p id="plugbot-btn-userlist" style="color:' + cUserList + '">Glory people</p>');
 }
  
 /**
