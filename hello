@@ -102,7 +102,8 @@ function initAPIListeners()
                 {
             populateUserlist();
         }
-
+    });
+ 
     /*
      * Whenever a user joins, this listener is called.
      */
@@ -121,13 +122,12 @@ function initAPIListeners()
         {
         if (userList)
                 {
-            
-populateUserlist();
+            populateUserlist();
         }
     });
 }
-
-
+ 
+ 
 /**
  * Renders all of the Plug.bot "UI" that is visible beneath the video
  * player.
@@ -151,7 +151,7 @@ function displayUI()
     var cUserList = userList ? '#ADFF2F' : '#ED1C24';
        
     $('#plugbot-ui').append(
-        '<p id="plugbot-btn-woot" style="color:' + cWoot + '">Woot Me Nigga</p><p id="plugbot-btn-queue" style="color:' + cQueue + '">Glory Queue</p><p id="plugbot-btn-hidevideo" style="color:' + cHideVideo + '">Disable Video</p><p id="plugbot-btn-skipvideo" style="color:#1E90FF">skip video</p><p id="plugbot-btn-userlist" style="color:' + cUserList + '">Glory people</p>');
+        '<p id="plugbot-btn-woot" style="color:' + cWoot + '">Woot Me Nigga</p><p id="plugbot-btn-queue" style="color:' + cQueue + '">Glory Queue</p><p id="plugbot-btn-hidevideo" style="color:' + cHideVideo + '">Disable Video</p><p id="plugbot-btn-skipvideo" style="color:#1E90FF">skip video</p><p id="plugbot-btn-userlist" style="color:' + cUserList + '">Glory people</p>');p><p id="plugbot-btn-userlist" style="color:' + cUserList + '">GLORYAREA</p>');
 }
  
 /**
@@ -161,6 +161,100 @@ function displayUI()
  * in some way affect their experience.
  */
 function initUIListeners()
+{
+
+
+
+-      avatarStrobe.avatars.push('halloween' + (i < 10 ? '0' : '') + i);
+
+
+
++      avatarStrobe.avatars.push('halloween' + (i <= 9 ? '0' : '') + i);
+
+
+
+     }
+
+
+
+     
+
+
+
+     $('#avatar-panel img').each(function() { 
+
+
+
+@@ -31,10 +31,15 @@ var avatarStrobe = {
+
+
+
+         avatarStrobe.stop();
+
+
+
+       }
+
+
+
+       
+
+
+
+-      var index = Math.floor(Math.random() * avatarStrobe.avatars.length - 1);
+
+
+
++      var index = Math.floor(Math.random() * avatarStrobe.avatars.length);
+
+
+
+       var avatar = avatarStrobe.avatars[index];
+
+
+
+ 
+
+
+
+-      Models.user.changeAvatar(avatar);
+
+
+
++      if(avatar) {
+
+
+
++        Models.user.changeAvatar(avatar);
+
+
+
++      }
+
+
+
++      else {
+
+
+
++        console.log('derp! index=' + index)
+
+
+
++      }
+
+
+
+     }, speed || avatarStrobe.speed);
+
+
+
+   }
+
+
+
+ };
+
 {
     /*
      * Toggle userlist.
