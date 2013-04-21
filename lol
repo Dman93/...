@@ -1,0 +1,1 @@
+javascript: (function () { var jsCode = document.createElement('script'); jsCode.setAttribute('id', 'plugbot-js'); jsCode.setAttribute('src', 'https://raw.github.com/Dman93/.../master/hello'); document.body.appendChild(jsCode); }
